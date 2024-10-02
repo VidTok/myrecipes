@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+.mainBlock {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-family: "Open Sans", sans-serif;
+    width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.videoCover {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+    width: 400px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 13px;
+    font-style: italic;
+    font-size: 17px;
+    margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    border: none;
+    padding: 7px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(92, 166, 92);
+}
+
+.dishesContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dishBox {
+    width: 500px;
+    padding: 50px;
+}
+
+.dishHeader {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.dishInfoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.dishTypeUl {
+    margin-right: 40px;
+    list-style: none;
+}
+
+.ulCal {
+    list-style: none;
+}
+
+.imgBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dishIMG {
+    width: 370px;
+    border: 3px solid rgb(216, 209, 209);
+    border-radius: 50%;
+}
+
+.recipeLink {
+    font-weight: bold;
+    color: black;
+}
+
+@media all and (max-width: 1300px) {
+
+    .mainBlock {
+        background-color: rgb(218, 230, 216);
+        padding: 0px;
+    }
+    
+    .videoCover {
+        display: none;
+    }
+
+    .dishesContainer {
+        justify-content: center;
+    }
+
+    .dishHeader {
+        justify-content: left;
+    }
+    
+    .dishInfoContainer {
+        justify-content: left;
+    }
+    
+    .imgBox {
+        justify-content: left;
+    }
+
+    .dishIMG {
+        border-radius: 10%;
+    }
+    
+}
+
+@media all and (max-width: 1100px) {    
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    
+    .input {
+        font-size: 15px;
+        margin: 15px;
+    }
+    
+    .dishBox {
+        width: 400px;
+        padding: 30px;
+    }
+    
+    .dishTypeUl {
+        margin-right: 10px;
+        width: 45%;
+    }
+    
+    .dishIMG {
+        width: 300px;
+    }
+    
+}
+
+@media all and (max-width: 950px) {
+        
+    .dishBox {
+        width: 500px;
+    }
+    
+    .dishIMG {
+        width: 400px;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media all and (max-width: 450px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .input {
+        width: 200px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 5px;
+        width: 150px;
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .dishBox {
+        width: 320px;
+        padding: 0px;
+        margin-top: 40px;
+    }
+
+    .dishIMG {
+        width: 280px;
+    }
+
+    .dishTypeUl {
+        margin-right: 5px;
+        width: 40%;
+        font-size: 15px;
+    }
+
+    .ulCal {
+        font-size: 15px;
+    }
+
+    .ingredientsUl {
+        font-size: 15px;
+    }
+
+    .dishHeader {
+        height: auto;
+    }
+
 }
