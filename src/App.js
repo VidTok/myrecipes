@@ -48,14 +48,13 @@ function App() {
         </div>
 
         <div>
-          <form onSubmit={finalSearch}>
+          <form className='searchContainer' onSubmit={finalSearch}>
             <input className='input' placeholder='type...' onChange={recipeSearch} value={search} />
+            <button className='btn'>Find a recipe</button>
           </form>
         </div>
 
-        <div>
-          <button className='btn' onClick={finalSearch}>Find a recipe</button>
-        </div>
+
 
       </div>
 
